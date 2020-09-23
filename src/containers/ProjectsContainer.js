@@ -8,9 +8,16 @@ class ProjectsComponent extends Component {
     render(){
         return(
             <div>
-
+                <ProjectForm />
+                <Projects />
             </div>
         )
+    }
+}
+
+mapStateToProps = (state) => {
+    return {
+        projects: state.projects
     }
 }
 
