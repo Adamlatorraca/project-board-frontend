@@ -12,7 +12,7 @@ function manageProjects(state = { projects: [] }, action) {
                 contact: action.contact
             }
 
-            return {...state, projects: [state.projects, project] }
+            return {...state, projects: state.projects.concat(project) }
         
         default:
             return state
