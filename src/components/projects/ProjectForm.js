@@ -16,7 +16,7 @@ class ProjectForm extends Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        //this.props.addProject(this.state)
+        this.props.addProject(this.state)
         this.setState({
             title: '',
             description: '',
@@ -33,23 +33,23 @@ class ProjectForm extends Component {
                     
                     <legend>Tell the world about your project!</legend>
                     <br />
-                    <label for="title">Project Title:   </label>
-                    <input id="title" name="title" type="text" required="" />
+                    <label htmlFor="title">Project Title:   </label>
+                    <input id="title" name="title" type="text" required="" value={this.state.title} onChange={(event) => this.handleOnChange(event)} />
                     
                     <br />
                     <br />
                     
-                    <label for="description">Project Description:   </label>
-                    <textarea class="form-control" id="description" name="description"></textarea>
+                    <label htmlFor="description">Project Description:   </label>
+                    <textarea className="form-control" id="description" name="description" value={this.state.description} onChange={(event) => this.handleOnChange(event)} />
 
                     <br />
                     <br />
-                    <label class="col-md-4 control-label" for="contact">Contact Info:   </label>  
-                    <input id="contact" name="contact" type="text" required="" />
+                    <label className="col-md-4 control-label" htmlFor="contact">Contact Info:   </label>  
+                    <input id="contact" name="contact" type="text" required="" value={this.state.contact} onChange={(event) => this.handleOnChange(event)} />
                     <br />
                     <br />
 
-                    <button id="submit" name="submit" class="btn btn-primary">Post Your Project!</button>
+                    <button id="submit" name="submit" className="btn btn-primary" type="submit" >Post Your Project!</button>
 
                 </form>
             </div>
