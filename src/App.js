@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ProjectsContainer from '/containers/ProjectsContainer'
+import ProjectsContainer from './containers/ProjectsContainer'
 
 class App extends React.Component {
  
