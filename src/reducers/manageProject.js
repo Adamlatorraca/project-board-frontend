@@ -1,18 +1,13 @@
-import uuid from 'uuid'
+//import uuid from 'uuid'
 
 function manageProjects(state = { projects: [] }, action) {
 
 
     switch (action.type) {
-        case 'Add Project':
-            const project = {
-                id: uuid(),
-                title: action.title,
-                description: action.description,
-                contact: action.contact
-            }
+        case 'ADD_PROJECT':
+            
 
-            return {...state, projects: state.projects.concat(project) }
+            return {...state, projects: [...state.projects, action.project] }
         
         default:
             return state
