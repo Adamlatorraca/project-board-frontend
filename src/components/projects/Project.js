@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CommentsContainer from '../../containers/CommentsContainer'
 
 class Project extends Component {
 
@@ -11,6 +12,7 @@ class Project extends Component {
                     <li>Description: {this.props.project.description}</li>
                     <li>Contact Info: {this.props.project.contact}</li>
                 </ul>
+                <CommentsContainer project={this.props.project} />
             </div>
         )
     }
