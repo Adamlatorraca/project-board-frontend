@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Comment from './Review';
 
-class Reviews extends Component {
+class Comments extends Component {
 
   render() {
+
+
     return (
       <ul>
 
@@ -12,4 +14,4 @@ class Reviews extends Component {
   }
 };
 
-export default Reviews;
+export default Comments;
