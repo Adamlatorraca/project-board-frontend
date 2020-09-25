@@ -1,6 +1,6 @@
 import React, { Component} from 'react'
 import CommentInput from '../components/comments/CommentInput'
-//import Comments from '../components/comments/Comments
+import Comments from '../components/comments/Comments'
 import { connect } from 'react-redux'
 
 class CommentsContainer extends Component {
@@ -9,6 +9,7 @@ class CommentsContainer extends Component {
         return(
             <div>
                 <CommentInput addComment={this.props.addComment} projectId={this.props.project.id}/>
+                <Comments comments={this.props.comments} projectId={this.props.project.id} />
             </div>
         )
     }
